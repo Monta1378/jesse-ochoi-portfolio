@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jesse Ochoi | Frontend Developer</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">OJO NET</div>
+                <div class="theme-toggle">🌙</div>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="hero">
+                <div class="hero-content">
+                    <h1>Jesse Ochoi</h1>
+                    <p>IT Manager   //  Systems & Infrastructure //  Nairobi, KE</p>
+                    <p>I lead technology operations and infrastructure with a focus on reliability, security, and strategic alignment. From managing complex systems to driving digital transformation - I keep organizations running at their best</p>
+                    <a href="#work" class="btn">VIEW MY WORK</a>
+                    <a href="#contact" class="btn">GET IN TOUCH</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/banner.jpg" alt="OJO NET Branding">
+                </div>
+            </section>
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>Experience</h3>
+                        <p>IT Manager with 2+ years leading infrastructure, systems, and digital transformation initiatives.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Current Role</h3>
+                        <p>IT Manager @ OJO NET - Managing infastructure, security, and business systems.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Education</h3>
+                        <p>BSc. Mathematics And Computer Science</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Availability</h3>
+                        <p>Open to consulting, advisory, and strategic IT leadership roles.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="skills">
+                <h2>Skills & Services</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Infrastructure & Networking</h3>
+                        <ul>
+                            <li>CISCO</li>
+                            <li>Firewalls</li>
+                            <li>VPN</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>System Administration</h3>
+                        <ul>
+                            <li>Windows Server</li>
+                            <li>PowerShell</li>
+                            <li>Linux</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>IT Service Management</h3>
+                        <ul>
+                            <li>Monitoring</li>
+                            <li>Automation</li>
+                            <li>Support Systems</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Consulting Services</h3>
+                        <ul>
+                            <li>IT Strategy</li>
+                            <li>Digital Transformation</li>
+                            <li>Team Leadership</li>
+                            <li>Vendor Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="work">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Network Infastructure Setup</h3>
+                    <p>Designed and deployed secure enterprise netork infrastructure with firewall, VPN and monitoring tools.</p>
+                    <span class="status">In Progress</span>
+                </div>
+                <div class="project-card">
+                    <h3>System Automation Scripts</h3>
+                    <p>Building Powershell and linux scripts to automate IT administrative tasks.</p>
+                    <span class="status">In Progress</span>
+                </div>
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>Developing responsive professional portfolio using HTML and CSS.</p>
+                    <span class="status">In Progress</span>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>Whether you have an IT challenge to solve, a transformation project in mind, or want to explore a consulting engagement - I'd love to connect. Response within 24 hours</p>
+            <p><a href="mailto:ochoijesse04@gmail.com" class="btn">Email Me</a></p>
+            <h3>Socials</h3>
+            <ul>
+                <li><a href="https://linkedin.com/in/jesse-ochoi-a205282b9" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+                <li><a href="https://twitter.com/@O_Jesse004" target="_blank" rel="noopener noreferrer">TWITTER / X</a></li>
+                <li><a href="https://github.com/Monta1378" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
+                <li><a href="https://ojonet.co.ke" target="_blank" rel="noopener noreferrer">OJO NET</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jesse Ochoi | OJO NET | All rights Reserved.</p>
+    </footer>
+    <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+    const theme = document.querySelector('.theme-toggle');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+    if(localStorage.getItem('dark-mode') === 'enabled'){
+        document.body.classList.add('dark-mode');
+    }
+    theme.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if(document.body.classList.contains('dark-mode')){
+            localStorage.setItem('dark-mode', 'enabled');
+        }else{
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('show');
+            }
+        });
+    });
+    document.querySelectorAll('section').forEach(section =>{
+        section.classList.add('fade-in');
+        observer.observe(section);
+    });
+    </script>
+    </body>
+</html>
