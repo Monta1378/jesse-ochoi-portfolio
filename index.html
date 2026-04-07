@@ -96,73 +96,73 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="work">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Network Infastructure Setup</h3>
-                    <p>Designed and deployed secure enterprise netork infrastructure with firewall, VPN and monitoring tools.</p>
-                    <span class="status">In Progress</span>
+            </section>
+            <section id="work">
+                <h2>Projects</h2>
+                <div class="projects">
+                    <div class="project-card">
+                        <h3>Network Infrastructure Setup</h3>
+                        <p>Designed and deployed secure enterprise network infrastructure with firewall, VPN and monitoring tools.</p>
+                        <span class="status">In Progress</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>System Automation Scripts</h3>
+                        <p>Building Powershell and linux scripts to automate IT administrative tasks.</p>
+                        <span class="status">In Progress</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>Portfolio Website</h3>
+                        <p>Developing responsive professional portfolio using HTML and CSS.</p>
+                        <span class="status">Completed</span>
+                        <a href="https://monta1378.github.io/jesse-ochoi-portfolio/" target="_blank" rel="noopener noreferrer" class="project-link">View Live →</a>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>System Automation Scripts</h3>
-                    <p>Building Powershell and linux scripts to automate IT administrative tasks.</p>
-                    <span class="status">In Progress</span>
-                </div>
-                <div class="project-card">
-                    <h3>Portfolio Website</h3>
-                    <p>Developing responsive professional portfolio using HTML and CSS.</p>
-                    <span class="status">In Progress</span>
-                </div>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>Whether you have an IT challenge to solve, a transformation project in mind, or want to explore a consulting engagement - I'd love to connect. Response within 24 hours</p>
-            <p><a href="mailto:ochoijesse04@gmail.com" class="btn">Email Me</a></p>
-            <h3>Socials</h3>
-            <ul>
-                <li><a href="https://linkedin.com/in/jesse-ochoi-a205282b9" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
-                <li><a href="https://twitter.com/@O_Jesse004" target="_blank" rel="noopener noreferrer">TWITTER / X</a></li>
-                <li><a href="https://github.com/Monta1378" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
-                <li><a href="https://ojonet.co.ke" target="_blank" rel="noopener noreferrer">OJO NET</a></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Jesse Ochoi | OJO NET | All Rights Reserved.</p>
-    </footer>
-    <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-links');
-    const theme = document.querySelector('.theme-toggle');
-    toggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
-    if(localStorage.getItem('dark-mode') === 'enabled'){
-        document.body.classList.add('dark-mode');
-    }
-    theme.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        if(document.body.classList.contains('dark-mode')){
-            localStorage.setItem('dark-mode', 'enabled');
-        }else{
-            localStorage.setItem('dark-mode', 'disabled');
+            </section>
+            <section id="contact">
+                <h2>Get In Touch</h2>
+                <p>Whether you have an IT challenge to solve, a transformation project in mind, or want to explore a consulting engagement - I'd love to connect. Response within 24 hours</p>
+                <p><a href="mailto:ochoijesse04@gmail.com" class="btn">Email Me</a></p>
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="https://linkedin.com/in/jesse-ochoi-a205282b9" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+                    <li><a href="https://twitter.com/@O_Jesse004" target="_blank" rel="noopener noreferrer">TWITTER / X</a></li>
+                    <li><a href="https://github.com/Monta1378" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
+                    <li><a href="https://ojonet.co.ke" target="_blank" rel="noopener noreferrer">OJO NET</a></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Jesse Ochoi | OJO NET | All Rights Reserved.</p>
+        </footer>
+        <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav-links');
+        const theme = document.querySelector('.theme-toggle');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        if(localStorage.getItem('dark-mode') === 'enabled'){
+            document.body.classList.add('dark-mode');
         }
-    });
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('show');
+        theme.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if(document.body.classList.contains('dark-mode')){
+                localStorage.setItem('dark-mode', 'enabled');
+            }else{
+                localStorage.setItem('dark-mode', 'disabled');
             }
         });
-    });
-    document.querySelectorAll('section').forEach(section =>{
-        section.classList.add('fade-in');
-        observer.observe(section);
-    });
-    </script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+        document.querySelectorAll('section').forEach(section =>{
+            section.classList.add('fade-in');
+            observer.observe(section);
+        });
+        </script>
     </body>
 </html>
