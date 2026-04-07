@@ -292,6 +292,16 @@ section p{
     .project-card p{
         margin-bottom: 15px;
     }
+    .project-link{
+        display: inline-block;
+        margin-top: 12px;
+        color: chocolate;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .project-link:hover{
+        text-decoration: underline;
+    }
     footer{
     margin-top: 80px;
     padding: 30px 40px;
